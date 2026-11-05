@@ -9,8 +9,8 @@
 <style>
 main{max-width:none;padding:0}
 .in{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
-.car{position:relative;overflow:hidden;background:#0b1214;aspect-ratio:800/446;max-height:78vh;width:100%}
-@media(max-width:700px){.car{aspect-ratio:800/597}}
+.car{position:relative;overflow:hidden;background:#0b1214;aspect-ratio:800/446;width:min(1180px,calc(100% - 2*clamp(16px,4vw,48px)),calc((100vh - 130px)*1.794));margin:18px auto 0;border-radius:18px}
+@media(max-width:700px){.car{aspect-ratio:800/597;width:100%;margin:0;border-radius:0}}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .car .sl{position:absolute;inset:0;opacity:0;transition:opacity .7s;pointer-events:none}
 .car .sl.on{opacity:1;pointer-events:auto}
