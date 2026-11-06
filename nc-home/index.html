@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Natural Camouflage · Gym Suits · Bagé, RS</title>
+<meta name="description" content="Natural Camouflage — streetwear e gymwear premium de Bagé, RS. Collections Classic e Streetwear.">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/nc-core/css/core.css?v=2">
+<script src="/nc-core/js/core.js?v=2"></script>
+<style>
+main{max-width:none;padding:0}
+.in{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+.car{position:relative;overflow:hidden;background:#0b1214;aspect-ratio:800/446;width:min(1180px,calc(100% - 2*clamp(16px,4vw,48px)),calc((100vh - 130px)*1.794));margin:18px auto 0;border-radius:18px}
+@media(max-width:700px){.car{aspect-ratio:800/597;width:100%;margin:0;border-radius:0}}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.car .sl{position:absolute;inset:0;opacity:0;transition:opacity .7s;pointer-events:none}
+.car .sl.on{opacity:1;pointer-events:auto}
+.car .sl img{width:100%;height:100%;object-fit:cover;display:block}
+.car .nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(5,7,8,.45);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.car .prev{left:12px}.car .next{right:12px}
+.car .dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:2}
+.car .dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.4);cursor:pointer}
+.car .dots button.on{background:#fff}
+@media(max-width:700px){.car .nav{display:none}}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:10px 0;white-space:nowrap}
+.mq span{display:inline-block;padding-left:100%;animation:mq 30s linear infinite;font:600 13px Unbounded;color:var(--teal)}
+@keyframes mq{to{transform:translateX(-100%)}}
+.ben{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;padding-block:28px}
+.ben div{padding:16px 18px;border:1px solid var(--line);border-radius:16px;background:var(--glass);font-size:13px;color:var(--mut)}
+.ben b{display:block;color:var(--bone);font:700 13px Unbounded;margin-bottom:4px}
+section.s{padding-block:36px}
+.s h2{font-size:clamp(22px,3.4vw,34px);margin-bottom:18px}
+.man{position:relative;min-height:380px;display:grid;place-items:center;text-align:center;overflow:hidden;background:linear-gradient(135deg,#18232a,#4a5a5f)}
+.man img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.man::after{content:"";position:absolute;inset:0;background:rgba(5,7,8,.55)}
+.man div{position:relative;z-index:1;max-width:60ch;padding:32px 20px}
+.man h2{font-size:clamp(26px,5vw,52px);margin-bottom:12px}.man p{color:#c9d6d5;margin:0 0 20px}
+</style></head><body>
+<main>
+<section class="car" aria-roledescription="carrossel" aria-label="Destaques">
+  <h1 class="vh">Natural Camouflage · Vista o que te camufla</h1>
+  <div class="track" id="track"></div>
+  <button class="nav prev" aria-label="Anterior">‹</button>
+  <button class="nav next" aria-label="Próximo">›</button>
+  <div class="dots" id="dots"></div>
+</section>
+<div class="mq" aria-hidden="true"><span>NATURAL CAMOUFLAGE · GYM SUITS · BAGÉ, RS · BRASIL · COLLECTION CLASSIC · COLLECTION STREETWEAR · NATURAL CAMOUFLAGE · GYM SUITS · BAGÉ, RS · BRASIL ·</span></div>
+<div class="in">
+  <div class="ben">
+    <div><b>PIX COM 5% OFF</b>Desconto automático no checkout.</div>
+    <div><b>FRETE GRÁTIS</b>Em compras a partir de R$ 250,00.</div>
+    <div><b>PAGAMENTO SEGURO</b>Processado pelo Mercado Pago.</div>
+    <div><b>ENVIO PARA TODO O BRASIL</b>Frete calculado pelo CEP.</div>
+  </div>
+  <section class="s"><h2>Collection Classic</h2><div class="grid" id="grid"></div></section>
+  <section class="s"><h2>Collection Streetwear</h2><div class="grid" id="grid2"></div><p style="margin:18px 0 0"><a class="btn sec" id="ver2" href="#">Ver Streetwear</a></p></section>
+</div>
+<section class="man" aria-label="Manifesto">
+  <img src="/nc-core/assets/banners/manifesto.jpg" alt="" onerror="this.remove()">
+  <div><h2>Disciplina é a melhor estampa.</h2><p>Natural Camouflage nasceu em Bagé para vestir quem encara o treino todos os dias. Corte oversized, tecido pesado, atitude discreta.</p>
+  <a class="btn sec" href="#" id="cta2">Conheça a coleção</a></div>
+</section>
+</main>
+<script>
+const {P,R,url,card,$,esc}=NC;
+$('#cta2').href=url('categorias',{colecao:'classic'});
+const B=[
+ {k:'black',alt:'No Limits. No Rules. Black Edition',href:url('categorias',{cor:'Preta'})},
+ {k:'green',alt:'Built Different. Green Edition',href:url('categorias',{cor:'Verde'})},
+ {k:'purple',alt:'Stay Focused. Purple Edition',href:url('categorias',{cor:'Roxa'})},
+ {k:'blue',alt:'Break the Ordinary. Blue Edition',href:url('categorias',{cor:'Azul'})},
+ {k:'pink',alt:'Own Your Power. Coleção feminina',href:url('categorias',{cor:'Rosa'})},
+ {k:'classic',alt:'Collection Classic',href:url('categorias',{colecao:'classic'})}
+];
+const D='/nc-core/assets/banners/';
+$('#track').innerHTML=B.map((b,i)=>`<a class="sl${i?'':' on'}" href="${b.href}" aria-label="${esc(b.alt)}"><picture><source media="(max-width:700px)" srcset="${D}${b.k}-mobile.jpg"><img src="${D}${b.k}-desktop.jpg" alt="${esc(b.alt)}"${i?' loading="lazy"':''}></picture></a>`).join('');
+$('#dots').innerHTML=B.map((_,i)=>`<button aria-label="Banner ${i+1}"${i?'':' class="on"'}></button>`).join('');
+const S=[...document.querySelectorAll('.car .sl')],T=[...document.querySelectorAll('.car .dots button')];
+let cur=0,tm;
+function go(n){cur=(n+S.length)%S.length;S.forEach((s,i)=>s.classList.toggle('on',i===cur));T.forEach((d,i)=>d.classList.toggle('on',i===cur));clearInterval(tm);tm=setInterval(()=>go(cur+1),5500)}
+T.forEach((d,i)=>d.onclick=()=>go(i));
+document.querySelector('.car .prev').onclick=()=>go(cur-1);
+document.querySelector('.car .next').onclick=()=>go(cur+1);
+let x0=null;const car=document.querySelector('.car');
+car.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+car.addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(cur+(d<0?1:-1));x0=null});
+go(0);
+
+const grids=()=>{$('#grid').innerHTML=P.filter(p=>p.col==='classic').map(card).join('');
+$('#grid2').innerHTML=P.filter(p=>p.col==='streetwear').map(card).join('')};
+grids();document.addEventListener('nc:stock',grids);
+$('#ver2').href=url('categorias',{colecao:'streetwear'});
+</script>
+</body></html>
